@@ -1,0 +1,32 @@
+<h2>Details</h2>
+
+<div *ngIf="crudData">
+  <div>
+    <label><b>Name: </b></label> {{crudData.name}}
+  </div>
+
+  <br>
+  <table>
+    <tr>
+      <th>Family Member</th>
+      <th>Family Relationship</th>
+    </tr>
+    <tr *ngFor="let familydetail of crudData.family_details">
+      <td>{{familydetail.familymember}}</td>
+      <td>{{familydetail.familyrelationship}}</td>
+    </tr>
+  </table>
+
+  <br>
+  <form [formGroup]="addMoreForm">
+    <mat-form-field appearance="fill">
+      <mat-label>House</mat-label>
+      <input matInput formControlName="house">
+    </mat-form-field>
+  </form>
+
+</div>
+
+<div [align]=" 'end' ">
+  <button mat-raised-button (click)="addingMoreData()" style="background-color:mediumseagreen; color:white;"> Save </button>
+</div>

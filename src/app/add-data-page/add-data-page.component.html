@@ -1,0 +1,47 @@
+<h2 style="text-align: center;">Add CRUD Data</h2>
+
+<div class="container">
+
+  <form [formGroup]="dataAddForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+
+    <div formArrayName="family_details">
+      <table>
+        <tr>
+          <th>Family Member</th>
+          <th>Relationship</th>
+          <th style="width: 5%;"></th>
+        </tr>
+
+        <tr *ngFor="let familyitem of familyDetails.controls; let familyIndex = index" [formGroupName]="familyIndex">
+          <td>
+            <mat-form-field appearance="fill">
+              <textarea matInput formControlName="familymember"></textarea>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field appearance="fill">
+              <input matInput formControlName="familyrelationship">
+            </mat-form-field>
+          </td>
+          <td [align]=" 'center' ">
+            <button mat-icon-button style="color: salmon;" (click)="deleteFamilyDetail(familyIndex)"><mat-icon>delete</mat-icon></button>
+          </td>
+        </tr>
+
+        <tr [align]=" 'right' ">
+          <td colspan="3"><button mat-flat-button style="background-color: skyblue; color:white; width: 10rem;" (click)="addFamilyDetail()"><mat-icon>add</mat-icon>Add Row</button></td>
+        </tr>
+      </table>
+    </div>
+
+  </form>
+</div>
+
+<div [align]=" 'end' ">
+  <button mat-raised-button (click)="addingData()" style="background-color:mediumseagreen; color:white;"> Save </button>
+</div>
+

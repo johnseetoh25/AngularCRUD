@@ -1,0 +1,68 @@
+{
+  "dataList": [
+    {
+      "name": "John See Toh",
+      "family_details": [
+        {
+          "familymember": "Carmen",
+          "familyrelationship": "daughter"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "John See Toh",
+      "family_details": [
+        {
+          "familymember": "Mike Tong",
+          "familyrelationship": "buddy is good"
+        },
+        {
+          "familymember": "Darren ",
+          "familyrelationship": "bad guys"
+        }
+      ],
+      "house": "bungalow",
+      "id": 2
+    },
+    {
+      "name": "Harrier Potter",
+      "family_details": [
+        {
+          "familymember": "Your Dad Potter",
+          "familyrelationship": "daddy"
+        },
+        {
+          "familymember": "u mum potter",
+          "familyrelationship": "mum"
+        }
+      ],
+      "house": "kampung",
+      "id": 3
+    },
+    {
+      "name": "Michela",
+      "family_details": [
+        {
+          "familymember": "Daniel",
+          "familyrelationship": "brother"
+        },
+        {
+          "familymember": "Elima",
+          "familyrelationship": "sister"
+        }
+      ],
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

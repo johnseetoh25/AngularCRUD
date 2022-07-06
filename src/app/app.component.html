@@ -1,0 +1,12 @@
+<mat-toolbar style="background-color:cornflowerblue">
+  <button mat-icon-button style="color: white;" [routerLink]="['']">
+    <mat-icon>home</mat-icon>
+  </button>
+  <span style="color: white;">CRUD Project 2</span>
+  <span class="spacer"></span>
+  <button mat-flat-button [routerLink]="['/add-data-page']">Add Data</button>
+</mat-toolbar>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

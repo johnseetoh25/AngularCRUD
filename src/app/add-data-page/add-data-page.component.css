@@ -1,0 +1,16 @@
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td, tr{
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+mat-form-field{
+  width: 100%;
+}
+
+
