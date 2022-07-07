@@ -50,6 +50,10 @@ export class HomePageComponent implements OnInit {
     this.router.navigate(['detail-data-page', row]);
   }
 
+  openApprovalPage(row: any){
+    this.router.navigate(['approval-page', row]);
+  }
+
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataListOut.filter = filterValue.trim().toLowerCase();

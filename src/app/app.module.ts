@@ -22,6 +22,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AddDataPageComponent } from './add-data-page/add-data-page.component';
 import { EditDataPageComponent } from './edit-data-page/edit-data-page.component';
 import { DetailDataPageComponent } from './detail-data-page/detail-data-page.component';
+import { ApprovalPageComponent } from './approval-page/approval-page.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { DetailDataPageComponent } from './detail-data-page/detail-data-page.com
     AddDataPageComponent,
     EditDataPageComponent,
     DetailDataPageComponent,
+    ApprovalPageComponent,
   ],
   imports: [
     BrowserModule,
