@@ -1,13 +1,19 @@
 {
   "dataList": [
     {
-      "name": "John See Toh",
+      "name": "See Toh",
       "family_details": [
         {
           "familymember": "Carmen",
           "familyrelationship": "daughter"
+        },
+        {
+          "familymember": "Tiffney ",
+          "familyrelationship": "son "
         }
       ],
+      "house": "hgh",
+      "address": "ddd",
       "id": 1
     },
     {
@@ -22,7 +28,7 @@
           "familyrelationship": "bad guys"
         }
       ],
-      "house": "bungalow",
+      "house": "bungalow big area",
       "id": 2
     },
     {

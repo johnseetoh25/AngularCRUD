@@ -38,6 +38,7 @@ export class DetailDataPageComponent implements OnInit {
       family_details: this.formBuilder.array([]),
       // add more data for the form field
       house: new FormControl(''),
+      address: new FormControl(''),
     });
 
   }
@@ -51,6 +52,7 @@ export class DetailDataPageComponent implements OnInit {
       this.addMoreForm.patchValue({
         name: data.name,
         house: data.house,
+        address: data.address,
       });
 
       this.dataList.family_details.map((familyDetail: any)=>{

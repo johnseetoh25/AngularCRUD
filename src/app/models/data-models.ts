@@ -1,9 +1,9 @@
 export interface DataModels {
-  [x: string]: any;
   _id: any;
   name: any;
   family_details: FamilyDetail[];
   house: any;
+  address: any;
 }
 
 export interface FamilyDetail{

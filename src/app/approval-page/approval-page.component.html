@@ -5,7 +5,7 @@
   <form [formGroup]="dataEditForm">
     <mat-form-field appearance="fill">
       <mat-label>Name</mat-label>
-      <input matInput formControlName="name">
+      <input matInput formControlName="name" >
     </mat-form-field>
 
     <div formArrayName="family_details">
@@ -29,12 +29,14 @@
             </mat-form-field>
           </td>
           <td [align]=" 'center' ">
-            <button mat-icon-button style="color: salmon;" (click)="deleteFamilyDetail(familyIndex)"><mat-icon>delete</mat-icon></button>
+            <button mat-icon-button [disabled]="dataEditForm.disabled || doneApproved" style="color: salmon;" (click)="deleteFamilyDetail(familyIndex)">
+              <mat-icon>delete</mat-icon>
+            </button>
           </td>
         </tr>
 
         <tr [align]=" 'right' ">
-          <td colspan="3"><button mat-flat-button style="background-color: skyblue; color:white; width: 10rem;" (click)="addFamilyDetail()"><mat-icon>add</mat-icon>Add Row</button></td>
+          <td colspan="3"><button mat-flat-button [disabled]="dataEditForm.disabled || doneApproved" style="background-color: skyblue; color:white; width: 10rem;" (click)="addFamilyDetail()"><mat-icon>add</mat-icon>Add Row</button></td>
         </tr>
       </table>
     </div>
@@ -46,9 +48,14 @@
       <input matInput formControlName="house">
     </mat-form-field>
 
+    <mat-form-field appearance="fill">
+      <mat-label>Address</mat-label>
+      <input matInput formControlName="address">
+    </mat-form-field>
+
   </form>
 </div>
 
 <div [align]=" 'end' ">
-  <button mat-raised-button style="background-color:mediumseagreen; color:white;"> Save </button>
+  <button mat-raised-button [disabled]="dataEditForm.disabled || doneApproved" (click)=" submitEditedCrudData()" style="background-color:mediumseagreen; color:white;"> Save </button>
 </div>
